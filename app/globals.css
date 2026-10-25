@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #f5efe6;
+  --beige: #d8c4a8;
+  --violet: #1c0221; 
+  --coffee: #3b2924;
+  --accent: #f3d36b;
+  --crimson: #931621;
+}
+
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--violet);
+  font-family: var(--font-dm-sans);
+}
+
+.font-brand {
+  font-family: var(--font-bodoni);
+}
+
+.font-display {
+  font-family: var(--font-syne);
+}
+
+@keyframes steam {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(5px, -3px) scale(1.08);
+  }
+  50% {
+    transform: translate(-4px, 3px) scale(0.95);
+  }
+  75% {
+    transform: translate(3px, 5px) scale(1.06);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+.coffee-cursor {
+  position: fixed;
+  top: -16px;
+  left: -16px;
+  width: 32px;
+  height: 32px;
+  pointer-events: none;
+  z-index: 99999;
+  object-fit: contain;
+  will-change: transform;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .coffee-cursor {
+    display: none;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body,
+  body * {
+    cursor: none !important;
+  }
+}
